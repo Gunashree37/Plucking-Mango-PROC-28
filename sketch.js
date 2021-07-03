@@ -93,16 +93,7 @@ function draw() {
   detectollision(stoneObj,mango12);
 }
 
-function mouseDragged()
-{
-	Matter.Body.setPosition(stoneObj.body, {x:mouseX, y:mouseY}) 
-}
 
-function mouseReleased()
-{
-	launcherObject.fly();
-    // distance=int(dist(stoneObj.x,stoneObj.y,mango1.x,mango1.y));
-}
 
 function keyPressed() {
 	if (keyCode === 32) {
@@ -110,6 +101,7 @@ function keyPressed() {
 	  launcherObject.attach(stoneObj.body);
 	}
   }
+
 
   function detectollision(lstone,lmango){
 	/*var collision = Matter.SAT.collides(lstone,lmango);
